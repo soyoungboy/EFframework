@@ -1,17 +1,15 @@
 package com.eflake.efframework.utils;
 
-import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
+import android.os.Environment;
 
 import org.apache.http.util.EncodingUtils;
 
-import android.os.Environment;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class FileUtils {
     private static final String TAG = "FileUtils";

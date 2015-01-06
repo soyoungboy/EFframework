@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- For panning view -->
+    <declare-styleable name="PanningView">
+        <attr name="panningDurationInMs" format="integer" />
+    </declare-styleable>
+
+    <!-- custom attibute -->
+    <declare-styleable name="BaseViewAttr">
+        <attr name="base_width" format="dimension"/>
+        <attr name="base_height" format="dimension"/>
+        <attr name="base_alpha" format="float"/>
+        <attr name="base_visible" format="boolean"/>
+        <attr name="base_size" format="integer"/>
+        <attr name="base_color" format="color"/>
+        <attr name="base_complete" format="fraction"/>
+        <attr name="base_name" format="string"/>
+    </declare-styleable>
+
+</resources>

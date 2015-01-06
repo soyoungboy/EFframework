@@ -1,11 +1,11 @@
 package com.eflake.efframework.utils;
 
-import java.io.File;
-
 import android.content.Context;
 import android.os.Build;
 import android.os.Environment;
 import android.os.StatFs;
+
+import java.io.File;
 
 /**
  * Context.getExternalFilesDir()-SDCard/Android/data/你的应用的包名/files/</p>

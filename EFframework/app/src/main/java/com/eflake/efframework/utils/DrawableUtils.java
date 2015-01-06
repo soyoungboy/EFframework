@@ -27,7 +27,7 @@ public class DrawableUtils {
 		 */
 		public static Drawable byteArrayToDrawable(byte[] bytes, Context context) {
 			return null == bytes ? null : BitmapUtil.bitmapToDrawable(
-					BitmapFactory.decodeByteArray(bytes, 0, bytes.length), context);
+                    BitmapFactory.decodeByteArray(bytes, 0, bytes.length), context);
 		}
 
 		/**
