@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!-- colorPrimary 定义 ActionBar 的背景色 -->
+        <item name="colorPrimary">@color/indigo_500</item>
+        <!-- colorPrimaryDark 定义状态栏的背景色 -->
+        <item name="colorPrimaryDark">@color/indigo_900</item>
+        <!-- colorAccent 为 colorControlActivated 的默认值，该值用户显示控件的高亮状态 -->
+        <item name="colorAccent">@color/indigo_200</item>
+        <!-- 还可以设置 colorControlNormal, colorControlActivated
+              colorControlHighlight, 和 colorSwitchThumbNormal 的值来控制控件的颜色. -->
+        <!--ActionMode时，ToolBar选择覆盖模式-->
+
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:actionBarStyle">@style/Eflake.Theme.actionbar</item>
+
+        <item name="actionModeBackground">?attr/colorPrimary</item>
+
+        <!--ListVIew单选模式选中背景色-->
+        <item name="android:listChoiceBackgroundIndicator">@color/primary_accent</item>
+        <item name="android:listChoiceIndicatorMultiple">@color/primary_accent</item>
+    </style>
+
+    <style name="Eflake.Theme.actionbar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:actionModeBackground">@color/primary</item>
+    </style>
+
+
+</resources>
