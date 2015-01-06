@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/EFframework.iml" filepath="$PROJECT_DIR$/EFframework.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eflibrary/eflibrary.iml" filepath="$PROJECT_DIR$/eflibrary/eflibrary.iml" />
     </modules>
   </component>
 </project>

@@ -17,10 +17,10 @@ import android.support.v4.widget.DrawerLayout;
 
 import com.balysv.materialmenu.MaterialMenuDrawable;
 import com.eflake.efframework.R;
-import com.eflake.efframework.base.BaseToolbarActivity;
+import com.lavadroid.eflake.eflibrary.base.BaseToolbarActivity;
 
 
-public class MainActivity extends ActionBarActivity
+public class MainActivity extends BaseToolbarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks, DrawerLayout.DrawerListener {
 
     /**
