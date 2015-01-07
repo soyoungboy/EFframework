@@ -1,8 +1,473 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Eflibrary</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <!-- common -->
+    <string name="cancel">取消</string>
+    <string name="delete">删除</string>
+    <string name="ok">确定</string>
+    <string name="edit">编辑</string>
+    <string name="select_all">全选</string>
+    <string name="unselect_all">反选</string>
+    <string name="refresh">刷新</string>
+    <string name="download">下载</string>
+    <string name="share">共享</string>
+    <string name="cut">剪切</string>
+
+    <!-- FileBrowserActivity -->
+    <string name="empty_folder">空文件夹</string>
+    <string name="create_new">新建</string>
+    <string name="create_new_folder">新建文件夹</string>
+    <string name="new_folder_name">请输入新的文件夹名</string>
+    <string name="unavailable_new_folder_name">文件夹名不能为空</string>
+    <string name="upload">上传</string>
+    <string name="transmit">传输</string>
+    <string name="delete_multi_files">批量删除</string>
+    <string name="rename">重命名</string>
+    <string name="livespace">我的快盘</string>
+    <string name="confirm">确认</string>
+    <string name="share_link">分享链接</string>
+    <string name="open_by_kuaipan">快盘打开</string>
+    <string name="open_by_kuaipan_falied">快盘打开失败！</string>
+    <string name="shared_to_others">其他方式分享</string>
+    <string name="sdcard_invalid">无可用SD卡</string>
+    <string name="input_new_name">请输入新的文件名</string>
+    <string name="invalid_file_name">文件名不能为空</string>
+    <string name="file_loading">请稍候···</string>
+    <string name="delete_confirm_message">将在所有设备同步删除此文件</string>
+    <string name="delete_multi_files_confirm_message">将在所有设备同步删除已选中的%1$d个文件</string>
+    <string name="paste">粘贴</string>
+    <string name="choose_dir">选择目录</string>
+    <string name="pls_choose_dir">请选择上传目录:</string>
+    <string name="title_upload">选择上传文件</string>
+    <string name="title_backup">选择备份目录</string>
+    <string name="title_download">选择下载路径</string>
+    <string name="selected_files_size">已选择%d个</string>
+    <string name="upload_file_path_illegal">上传文件路径无效</string>
+    <string name="order">文件排序</string>
+    <string name="order_by_modified_time">修改时间</string>
+    <string name="order_by_name">名称</string>
+    <string name="order_by_size">大小</string>
+    <string name="order_by_type">类型</string>
+    <string name="category_all">所有文件</string>
+    <string name="category_apk">应用</string>
+    <string name="category_document">文档</string>
+    <string name="category_music">音乐</string>
+    <string name="category_picture">图片</string>
+    <string name="category_video">视频</string>
+    <string name="default_download_path">设为默认路径</string>
+    <string name="pls_choose_files">请选择要操作的文件！</string>
+    <string name="delete_failed">删除 "%1$s" 失败</string>
+    <string name="new_folder_failed">新建文件夹“%1$s”失败</string>
+    <string name="share_file_failed">共享 "%1$s" 失败</string>
+    <string name="move_failed">移动 "%1$s" 失败</string>
+    <string name="move_file_title">移动文件</string>
+    <string name="move_file_description">正在移动文件···</string>
+    <string name="rename_failed">重命名“%1$s”失败</string>
+    <string name="rename_succeed">重命名成功</string>
+    <string name="download_link_completed">我通过快盘分享了 "%1$s" ,点击下面地址查看:</string>
+    <string name="download_link_failed">生成分享链接失败</string>
+    <string name="opening">正在打开···</string>
+    <string name="delete_file_title">删除文件</string>
+    <string name="delete_file_description">正在删除文件···</string>
+    <string name="rename_file_description">正在重命名···</string>
+    <string name="exit_share_title">退出共享</string>
+    <string name="file_already_exist_dlg_title">文件已存在</string>
+    <string name="file_already_exist_dlg_message">是否覆盖当前已下载文件?</string>
+    <string name="message_exit_share">请确认是否要退出共享！</string>
+    <string name="directly_open_file">直接打开</string>
+    <string name="download_and_open">下载打开</string>
+    <string name="download_file_dlg_title">下载文件</string>
+    <string name="file_need_download_to_open">\n文件需要下载才可以打开！\n</string>
+    <string name="no_application_can_open_this_file">没有找到可以打开 "%1$s" 的应用程序</string>
+    <string name="open_changed_file_message">正在打开的本地文件与云端文件\n内容不一致，您可以选择\n1、下载（更新本地文件）\n2、上传（更新云端文件）\n3、查看（打开本地文件）</string>
+    <string name="open_changed_file_title">文件内容发生改变</string>
+    <string name="retry_after_login">你还没有登录，请登陆后重新再试！</string>
+    <string name="shared_by_kuaipan">通过快盘分享</string>
+    <string name="input_friend_mail">请输入一个好友账户</string>
+    <string name="shared_in_livespace">我收到的共享</string>
+    <string name="share_to_other_after_downloaded">文件正在下载中，待下载完成后再分享!</string>
+    <string name="shared_by_parent">其父目录或子目录已被共享！</string>
+    <string name="share_succeed">共享成功</string>
+    <string name="sort">排序</string>
+    <string name="sort_by_name">按名称</string>
+    <string name="sort_by_time">按时间</string>
+    <string name="sort_by_type">按类型</string>
+    <string name="sort_by_size">按大小</string>
+    <string name="upload_to_kuaipan">上传到快盘</string>
+    <string name="message_title_delete_file">删除文件</string>
+    <string name="message_delete_file_start">正在开始删除文件。</string>
+    <string name="message_delete_file_ongoing">正在删除文件(%1$d/%2$d)。</string>
+    <string name="message_file_deleted">已经删除%1$d个文件</string>
+    <string name="message_title_move_file">移动文件</string>
+    <string name="message_move_file_start">正在开始移动文件。</string>
+    <string name="message_move_file_ongoing">正在移动文件(%1$d/%2$d)。</string>
+    <string name="message_file_move">已经移动%1$d个文件</string>
+    <string name="message_file_move_fail">移动文件失败</string>
+    <string name="forbidden_character">已过滤非法字符</string>
+
+    <!-- Gallery Activity -->
+    <string name="gallery_empty">没有找到照片哦！</string>
+    <string name="gallery_loading">缓存加载中...</string>
+    <string name="file_option_share_others">转发</string>
+    <string name="file_option_link">链接</string>
+    <string name="imageview_pageindex">第%1$s张</string>
+    <string name="message_title_delete_image">删除照片</string>
+    <string name="message_title_sharelink">生成分享链接</string>
+    <string name="message_sharelink_fail">生成分享链接失败！</string>
+    <string name="message_nofile_select_delete">请选择要删除的照片！</string>
+    <string name="message_delete_fail">删除照片失败！</string>
+    <string name="message_delete_end">删除照片完成！</string>
+    <string name="message_delete_all">当前文件夹所有照片都已经被删除！</string>
+    <string name="message_refresh_fail">刷新时失败！</string>
+    <string name="gallery_title">云相册</string>
+    <string name="gallery_title_selectfile">点击选择文件</string>
+    <string name="gallery_title_selectednumber">已选择%1$d张照片</string>
+    <string name="dialog_message_delete_files">将在所有设备中删除选中的%1$d个项目</string>
+    <string name="dialog_message_delete_file">将在所有设备中删除此文件</string>
+    <string name="gallery_onloading">加载中···</string>
+    <string name="message_delete_image_start">正在开始删除照片。</string>
+    <string name="message_delete_image_ongoing">正在删除照片(%1$d/%2$d)。</string>
+    <string name="message_image_deleted">已经删除%1$d张照片</string>
+    <string name="gallery_share_image">分享图片</string>
+    <string name="choose_send_type">选择发送方式</string>
+    <string name="name_rootpath">根目录</string>
+    <string name="dialog_title_download">下载文件</string>
+    <string name="dialog_message_download">下载原图到本地</string>
+    <string name="message_add_downloadtask_fail">添加下载任务失败</string>
+    <string name="message_add_task_success">任务已添加</string>
+    <string name="textview_download_header">下载路径：</string>
+    <string name="button_select_download_path">修改下载路径</string>
+
+    <!-- Logo -->
+    <string name="init_failed_title">初始化失败</string>
+    <string name="init_failed_desc">系统未能正常初始化!</string>
+    <string name="add_shortcut_title">添加快捷方式</string>
+    <string name="add_shortcut_desc">点击确认为"金山快盘"创建快捷方式?</string>
+
+    <!-- Tour -->
+    <string name="app_name">快盘商业版</string>
+    <string name="tour_first_page">随时随地的查看文件</string>
+    <string name="tour_first_page_des">手机、电脑、Pad、网页、快盘让你的文件畅通无阻</string>
+    <string name="tour_second_page">多种登录方式</string>
+    <string name="tour_second_page_des">邮箱、QQ账号、新浪微博随你挑</string>
+    <string name="tour_thrid_page">自动备份相册</string>
+    <string name="tour_thrid_page_des">照片随照随传，自动保存你的生活点滴</string>
+    <string name="start_kuaipan">立即体验</string>
+    <!-- Feedback -->
+    <string name="input_email">请输入您的邮箱</string>
+    <string name="input_feedbeck">请输入您的反馈意见</string>
+    <string name="feedback">反馈问题</string>
+    <string name="feedback_title">用户反馈</string>
+    <string name="with_log">上传日志</string>
+    <string name="type_bug">程序错误和Bug</string>
+    <string name="type_advice">给快盘提点建议</string>
+    <string name="type_not_understand">有些功能不会使用</string>
+    <string name="type_other">其他问题</string>
+    <string name="submitting">正在提交···</string>
+    <string name="submit_success">提交成功,快盘非常感谢您的反馈！</string>
+    <string name="submit_failed">提交失败</string>
+
+    <!-- LoginSelect -->
+    <string name="use_kuaipan_first_time">注册新账号</string>
+    <string name="i_am_kuaipan_user">我有快盘账号</string>
+    <string name="textview_qqlogin">用QQ账号登录</string>
+    <string name="textview_sinalogin">用微博账号登录</string>
+    <string name="login_description">正在登录···</string>
+    <string name="register_description">正在注册···</string>
+    <string name="login_failed">登录失败</string>
+    <string name="login_success">登录成功</string>
+    <string name="textview_loginByotherWay">其他账号登录:</string>
+    <!-- Login -->
+    <string name="register_only_email">注册账号仅支持电子邮箱</string>
+    <string name="press_register_agree_legal">点击“注册”代表您同意&lt;a href="http://www.wps.cn/privacy/">《快盘用户协议》&lt;/a></string>
+    <string name="login">登 录</string>
+    <string name="register_password_length_error">密码长度必须大于6位少于32位，请重新输入</string>
+    <string name="login_failed_description">登录失败，用户名或密码错误</string>
+    <string name="register_target_exist_description">注册账号已存在，请更换其他账号</string>
+    <string name="register_userid_not_email">请输入正确的邮箱地址</string>
+    <string name="register_failed">注册失败</string>
+    <string name="register_failed_email_exist">该邮箱已被注册</string>
+    <string name="register_failed_vercode_error">验证码不正确</string>
+    <string name="textview_username">请输入邮箱</string>
+    <string name="textview_password">请输入密码</string>
+    <string name="login_kuaipan">登录快盘</string>
+    <string name="register_kuaipan">注册快盘</string>
+    <string name="register">注册</string>
+    <string name="textview_username_register">账号(请使用常用邮箱)</string>
+    <string name="textview_password_register">密码(请输入6位以上密码)</string>
+    <string name="login_username_empty">请输入账号</string>
+    <string name="login_password_empty">请输入密码</string>
+    <string name="network_unavailable">无网络</string>
+    <string name="operation_failed">操作失败</string>
+    <string name="qq_user">QQ用户</string>
+    <!-- Home -->
+    <string name="ui_main_menu_organization">企业联系人</string>
+    <string name="ui_main_menu_organization_tip1">查看企业联系人</string>
+    <string name="ui_main_menu_backup_photo">云相册</string>
+    <string name="ui_main_menu_backup_photo_tip1">只查看照片</string>
+    <string name="ui_main_menu_backup_cotact">备份联系人</string>
+    <string name="ui_main_menu_backup_cotact_tip1">有备无患，随时找回</string>
+    <string name="ui_main_menu_show_net_files">个人空间</string>
+    <string name="action_bar_more">更多</string>
+    <string name="ui_main_menu_show_net_files_tip1">查看我空间里的所有文件</string>
+    <string name="ui_main_menu_show_group_files">共享空间</string>
+    <string name="ui_main_menu_show_group_files_tip1">查看共享空间中的所有文件</string>
+    <string name="ui_main_menu_backup_share">我收到的共享</string>
+    <string name="ui_main_menu_backup_share_tip1">查看好友共享给我的文件</string>
+    <string name="ui_main_menu_favorite">收藏夹</string>
+    <string name="ui_main_menu_favorite_tip1">查看我收藏的文件</string>
+    <string name="actionbutton_signin">签到</string>
+    <string name="sign_description">正在签到···</string>
+    <string name="already_signin_description">您今天已经签到过了，明天再来试试吧</string>
+    <string name="already_signin">已签到</string>
+    <string name="signin_error">签到失败</string>
+    <string name="signin_success">签到成功</string>
+    <string name="acount_is_null">账户不存在</string>
+    <string name="signin_getspace_description">您获得永久免费空间</string>
+    <string name="error_to_relogin">请重新登录</string>
+
+    <!-- update -->
+    <string name="upgrade_progress_tip">下载快盘升级包%d%%</string>
+    <string name="kuaipan_upgrade">快盘升级</string>
+    <string name="upgrade_never_warning">一周内不再提示</string>
+    <string name="upgrade">立刻升级</string>
+    <string name="new_version_downloading">新版本下载中···</string>
+    <string name="notify_next">下次再说</string>
+    <string name="no_upgrade">当前已经是最新版本</string>
+
+    <!-- Lock -->
+    <string name="zero">0</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="back">back</string>
+    <string name="enter_password">请输入密码</string>
+    <string name="title_unlock_screen">打开快盘</string>
+    <string name="title_set_secret">启用密码锁</string>
+    <string name="title_close_secret">关闭密码锁</string>
+    <string name="please_input_password">请输入您的密码</string>
+    <string name="please_input_new_password">请输入新的密码</string>
+    <string name="please_input_old_password">请输入您旧的密码</string>
+    <string name="please_input_new_password_again">请再次输入新的密码</string>
+    <string name="close_secret_success">密码锁已关闭</string>
+    <string name="password_error_reinput">密码输入错误，请重新输入</string>
+    <string name="not_equal_please_reinput">两次密码输入不一致，请重新输入</string>
+    <string name="change_password_success">修改密码成功</string>
+
+    <!-- menu -->
+    <string name="ui_main_menu_option_task_manage">传输管理</string>
+    <string name="ui_main_menu_option_setting">程序设置</string>
+    <string name="ui_main_menu_option_help">问题反馈</string>
+    <string name="ui_main_menu_option_more">更多功能</string>
+
+    <!-- Setting -->
+    <string name="setting">程序设置</string>
+    <string name="user_info">用户信息</string>
+    <string name="used_space">已用空间：</string>
+    <string name="loading">加载中···</string>
+    <string name="load_err">加载失败</string>
+    <string name="clearing">正在清除缓存···</string>
+    <string name="exiting">正在退出···</string>
+    <string name="clear_cache">清除缓存</string>
+    <string name="local_cache">本地缓存 ：</string>
+    <string name="clear_cache_question">确定要清除本地缓存数据？</string>
+    <string name="advanced_settings">高级设置</string>
+    <string name="lock_screen">密码锁</string>
+    <string name="lock_code_on">密码锁已启用</string>
+    <string name="lock_code_off">密码锁已禁用</string>
+    <string name="exit_logout">退出登录</string>
+    <string name="exit_logout_info">注销当前账户</string>
+    <string name="exit_logout_question">注销后将清除本地缓存的数据，已下载的文件不会被删除。</string>
+    <string name="setting_items_recommand">精品推荐</string>
+    <string name="setting_soft_recommand">软件推荐</string>
+    <string name="setting_soft_recommand_description">精品软件推荐</string>
+    <string name="about_kuaipan">关于快盘</string>
+    <string name="check_version">检查更新</string>
+    <string name="version_checking">正在检查更新</string>
+    <string name="current_version">当前版本：</string>
+    <string name="to_learn_kuaipan">了解更多</string>
+    <string name="about_url_bbs">访问论坛 bbs.kuaipan.cn “安卓版交流区” </string>
+    <string name="setting_uploadlog">上传日志</string>
+    <string name="setting_uploading_log">日志上传中</string>
+    <string name="uploadlog_success">日志上传已完成</string>
+    <string name="uploadlog_fail">日志上传失败</string>
+    <string name="hint_uploadlog">告诉我们您遇到了什么问题</string>
+    <string name="setting_uploadlog_description">上传错误日志，便于我们改进。</string>
+    <string name="account_operation">账户操作</string>
+    <string name="setting_lock_screen">密码锁设置</string>
+    <string name="lock_screen_description">每次进入快盘都要输入密码</string>
+    <string name="reset_password">重置密码</string>
+    <string name="reset_password_description">重新设置密码锁密码</string>
+    <string name="auto_backup">自动备份</string>
+    <string name="auto_backup_on">自动备份已启用</string>
+    <string name="auto_backup_off">自动备份已禁用</string>
+    <string name="auto_backup_set">自动备份设置</string>
+    <string name="auto_backup_description">指定目录自动备份到云端，防止数据丢失</string>
+    <string name="backup_select_net">备份网络设置</string>
+    <string name="backup_only_wifi">仅通过WIFI网络</string>
+    <string name="backup_only_wifi_description">不在WIFI下备份可能会消耗您的流量</string>
+    <string name="autobackup_sys_content">系统备份目录</string>
+    <string name="autobackup_self_content">自定义备份目录</string>
+    <string name="backup_add_custom_folder">添加自定义备份目录</string>
+    <string name="backup_add_custom_folder_description">添加自定义自动备份文件夹</string>
+    <string name="backup_exist">您所选择的文件夹已在备份列表中</string>
+    <string name="backup_parent_exist">您选择的文件夹的父目录在备份列表中</string>
+    <string name="backup_child_exist">该目录下存在已备份的子目录，请先删除</string>
+    <string name="qq_user">QQ用户</string>
+    <string name="sina_weibo_user">新浪微博用户</string>
+
+    <!-- Transport -->
+    <string name="continue_task">继续所有</string>
+    <string name="pause">暂停所有</string>
+    <string name="remove_all_task_done">清除所有记录</string>
+    <string name="remove_all_task_doing">取消所有</string>
+    <string name="des_remove_all_runing_task">是否取消所有传输任务？</string>
+    <string name="des_remove_all_finished_task">是否清除所有传输记录？</string>
+    <string name="running_task">正在进行</string>
+    <string name="finished_task">已经完成</string>
+    <string name="running">进行中</string>
+    <string name="finished">已完成</string>
+    <string name="waitting">等待中···</string>
+    <string name="waitting_wifi">等待wifi网络</string>
+    <string name="trans_failed">传输失败</string>
+    <string name="network_time_out">网络连接超时</string>
+    <string name="no_more_space">空间不足，可在Web端清空回收站释放空间</string>
+    <string name="write_not_permited">您无权限上传文件到该目录</string>
+    <string name="file_locked">文件在云端被锁定，无法上传。</string>
+    <string name="file_too_large">文件太大暂不支持上传</string>
+    <string name="file_size_is_zero">文件0KB不支持上传</string>
+    <string name="manage_trans">传输管理</string>
+    <string name="trans_task">快盘传输</string>
+    <string name="des_running_trans">传输中：%1$s</string>
+    <string name="des_waiting_trans">等待中：%1$s</string>
+    <string name="task_paused">任务已暂停</string>
+    <string name="notify_pause_in_3g">节省流量模式启动，传输自动暂停</string>
+    <string name="notify_pause_no_net">无网络连接</string>
+    <string name="notify_run_in_3g">非wifi状态下，可能会消耗较多流量</string>
+    <string name="file_not_exists_need_download">没有找到文件，请重新下载。</string>
+    <string name="file_not_exists">没有找到文件。</string>
+    <string name="wait_for_downloaded">文件正在下载，请下载完成后再尝试打开。</string>
+    <!-- DocumentView -->
+    <string name="web_open_file_failed">打开文件失败</string>
+
+    <!-- Dialog -->
+    <string name="operating">操作中···</string>
+    <string name="operate_success">操作成功</string>
+    <string name="oparate_failed">操作失败</string>
+
+    <!-- SearchActivity -->
+    <string name="please_input_search_info">请输入搜索内容</string>
+    <string name="no_search_data">未找到与搜索条件匹配的文件！</string>
+    <string name="searching">搜索中···</string>
+    <string name="search">搜索</string>
+    <!-- autobackup -->
+    <string name="notification_title_autobackup">自动备份</string>
+    <string name="backup_title_running">%d个文件待备份</string>
+    <string name="backup_message_running">正在备份文件%s</string>
+    <string name="backup_title_completed">自动备份完成</string>
+    <string name="backup_message_completed">所有文件已备份完成</string>
+    <string name="backup_title_pause">自动备份暂停</string>
+    <string name="backup_message_pause">等待重新连接wifi网络</string>
+    <string name="backup_title_stop">自动备份停止</string>
+    <string name="backup_message_stop">自动备份已经停止</string>
+    <string name="backup_message_start">自动备份检测中···</string>
+    <string name="backup_title_overspace">空间已满</string>
+    <string name="backup_message_overspace">空间已满，请购买空间或者清除不用文件</string>
+    <string name="backup_title_fail">%d个文件备份失败</string>
+    <string name="backup_message_fail">点击通知重新上传备份失败文件，%s备份失败</string>
+    <string name="backup_folder_no_selected">还没有选择备份目录！</string>
+
+    <!-- EkpOrganizationActivity -->
+    <string name="tel">电话</string>
+    <string name="email">邮件</string>
+    <string name="sms">短信</string>
+    <string name="organization_empty">该部门为空！</string>
+    <string name="email_apk_not_exists">没有找到发邮件的应用.</string>
+    <string name="tel_apk_not_exists">没有找到打电话的应用.</string>
+    <string name="sms_apk_not_exists">没有找到发短信的应用.</string>
+    <string name="email_empty">该用户没有留下邮箱.</string>
+    <string name="mobile_empty">该用户没有留下电话号码.</string>
+    <string name="search_organization_empty">未找到您搜索的员工</string>
+
+    <!-- camera -->
+    <string name="switch_camera">切换摄像头</string>
+    <string name="loading_camera">相机加载中</string>
+    <string name="flash">闪光灯</string>
+    <string name="shutter">拍照</string>
+    <string name="settings">设置</string>
+    <string name="cannot_switch_camera">您的手机不支持切换摄像头</string>
+    <string name="retake">重拍</string>
+    <string name="upload_photo_fail">上传照片失败</string>
+    <string name="open_camera_fail">开启相机失败</string>
+    <string name="image_file_name_format">yyyyMMddHHmmss</string>
+    <string name="init_camera_error">相机初始化失败</string>
+    <string name="take_picture">拍摄</string>
+    <string name="capture_ok">使用</string>
+    <!-- note -->
+    <string name="title_note">移动便签</string>
+    <string name="title_textnote">文字便签</string>
+    <string name="title_recorder">声音便签</string>
+    <string name="title_camera">照片便签</string>
+    <string name="error_empty_text">内容不允许为空</string>
+    <string name="error_ioexception">存储失败</string>
+    <string name="error_file_note_exists">文件不存在</string>
+    <string name="store_list">暂存列表</string>
+    <string name="clear_notelist">清除</string>
+    <string name="title_clear_notelist">清除暂存列表</string>
+    <string name="store">暂存</string>
+    <string name="abandon">放弃</string>
+    <string name="dialog_select_type">选择文件类型</string>
+    <string name="dialog_type_text">文本</string>
+    <string name="dialog_type_audio">音频</string>
+    <string name="dialog_type_video">视频</string>
+    <string name="dialog_type_image">图像</string>
+    <string name="title_favorite">收藏夹</string>
+    <string name="favorite">收藏</string>
+    <string name="cancel_favorite">取消收藏</string>
+    <string name="set_favorite_success">收藏%1$s成功</string>
+    <string name="set_favorite_fail">收藏%1$s失败</string>
+    <string name="cancel_favorite_success">取消收藏%1$s成功</string>
+    <string name="cancel_favorite_fail">取消收藏%1$s失败</string>
+    <string name="empty_favorite">空收藏夹</string>
+    <string name="more">更多</string>
+    <string name="title_more_function">更多功能</string>
+    <string name="view">查看</string>
+    <string name="empty"></string>
+    <string name="waiting">请稍候...</string>
+
+    <!-- message -->
+    <string name="system_message">系统消息</string>
+    <string name="common_message">管理员消息</string>
+    <string name="iknown">我知道了</string>
+
+    <string name="logout">注销</string>
+
+    <string name="message_first_image">已是第一张！</string>
+    <string name="message_last_image">已是最后一张！</string>
+    <string name="message_only_one_image">只有一张图片！</string>
+
+    <string name="msg_developing">该功能正在开发中，敬请期待！</string>
+    <string name="msg_unsupport_usage">不支持以此种方式启动快盘</string>
+    <string name="select_upload_space">请选择上传空间</string>
+
+    <!-- perfered app -->
+    <string name="wps">WPS</string>
+    <string name="perfer_open_title">快盘商业版推荐您用以下方式打开：</string>
+    <string name="perfer_open_desc">小伙伴们都用这个打开</string>
+    <string name="choose_open_app">请选择文件打开方式！</string>
+    <string name="install">安装</string>
+
+    <string name="only_once">仅此一次</string>
+    <string name="always">始终</string>
+    <string name="share_to">分享到：</string>
+    <string name="no_google_app_store">没有找到Google Play应用商店！</string>
+    <string name="msg_failed_open_browser">启动浏览器失败 T_T</string>
+    <string name="msg_save_and_upload">修改已自动备份到快盘商业版</string>
+
 
 </resources>

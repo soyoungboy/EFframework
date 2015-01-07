@@ -1,1 +1,54 @@
-package com.lavadroid.eflake.eflibrary.utils;import android.content.Context;import android.content.pm.PackageManager.NameNotFoundException;/** * <p>Title: ReflectionUtil</p> * <p>Description:通过反射，动态获取资源文件 </p> * @author	Eflake * @date	2014-8-10 */public class ReflectionUtils {	public static Context getSkinContext(Context context, String skinPkgName) {		try {			return context.createPackageContext(skinPkgName, Context.CONTEXT_IGNORE_SECURITY);		} catch (NameNotFoundException e) {			e.printStackTrace();		}		return null;	}		public static int getIdentifier(Context context,String name,String defType) {//		String skinPkgName = "com.jit.skin_1";		String skinPkgName = context.getPackageName();    	return getSkinContext(context, skinPkgName).getResources().getIdentifier(name, defType, skinPkgName);    }		public static int anim(Context context,String name){		return getIdentifier(context,name,"anim");	}		public static int attr(Context context,String name){		return getIdentifier(context,name,"attr");	}		public static int dimen(Context context,String name){		return getIdentifier(context,name,"dimen");	}		public static int drawable(Context context,String name){		return getIdentifier(context,name,"drawable");	}		public static int id(Context context,String name){		return getIdentifier(context,name,"id");	}		public static int layout(Context context,String name){		return getIdentifier(context,name,"layout");	}		public static int menu(Context context,String name){		return getIdentifier(context,name,"menu");	}		public static int string(Context context,String name){		return getIdentifier(context,name,"string");	}		public static int style(Context context,String name){		return getIdentifier(context,name,"style");	}		public static int xml(Context context,String name){		return getIdentifier(context,name,"xml");	}	}
+/*
+ * Copyright 2014 Google Inc. All rights reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.lavadroid.eflake.eflibrary.utils;
+
+import java.lang.reflect.InvocationTargetException;
+
+public class ReflectionUtils {
+    public static Object tryInvoke(Object target, String methodName, Object... args) {
+        Class<?>[] argTypes = new Class<?>[args.length];
+        for (int i = 0; i < args.length; i++) {
+            argTypes[i] = args[i].getClass();
+        }
+
+        return tryInvoke(target, methodName, argTypes, args);
+    }
+
+    public static Object tryInvoke(Object target, String methodName, Class<?>[] argTypes,
+            Object... args) {
+        try {
+            return target.getClass().getMethod(methodName, argTypes).invoke(target, args);
+        } catch (NoSuchMethodException ignored) {
+        } catch (IllegalAccessException ignored) {
+        } catch (InvocationTargetException ignored) {
+        }
+
+        return null;
+    }
+
+    public static <E> E callWithDefault(Object target, String methodName, E defaultValue) {
+        try {
+            //noinspection unchecked
+            return (E) target.getClass().getMethod(methodName, (Class[]) null).invoke(target);
+        } catch (NoSuchMethodException ignored) {
+        } catch (IllegalAccessException ignored) {
+        } catch (InvocationTargetException ignored) {
+        }
+
+        return defaultValue;
+    }
+}

@@ -1,5 +1,7 @@
 package com.lavadroid.eflake.eflibrary.utils;
 
+import android.text.TextUtils;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.regex.Matcher;
@@ -24,6 +26,11 @@ public class ValidationUtil {
 		}
 		return tag;
 	}
+
+    public static boolean isEmail(String str) {
+        String expr = "^[\\w\\-\\.]+@[\\w\\-\\.]+(\\.\\w+)+$";
+        return TextUtils.isEmpty(str) ? false : str.matches(expr);
+    }
 
 	public static boolean isUrlValid(String url) {
 		try {
